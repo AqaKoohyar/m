@@ -18,7 +18,7 @@ else:
     BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
 WORKER_FILE = BASE_DIR / "worker.js"
-GITHUB_WORKER_URL = "https://raw.githubusercontent.com/aqakoohyar/aqakoohyarmeow/refs/heads/main/worker.js"
+GITHUB_WORKER_URL = "https://raw.githubusercontent.com/AqaKoohyar/aqakoohyarmeow/refs/heads/main/worker.js"
 CF_API_BASE = "https://api.cloudflare.com/client/v4"
 LOCAL_TOKEN = secrets.token_urlsafe(32)
 COOKIE_NAME = "meow_token"
