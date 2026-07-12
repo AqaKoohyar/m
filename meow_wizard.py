@@ -18,7 +18,7 @@ else:
     BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
 WORKER_FILE = BASE_DIR / "worker.js"
-GITHUB_WORKER_URL = "https://raw.githubusercontent.com/IRmeow/meow-Proxy/refs/heads/main/worker.js"
+GITHUB_WORKER_URL = "https://raw.githubusercontent.com/aqakoohyar/aqakoohyarmeow/refs/heads/main/worker.js"
 CF_API_BASE = "https://api.cloudflare.com/client/v4"
 LOCAL_TOKEN = secrets.token_urlsafe(32)
 COOKIE_NAME = "meow_token"
@@ -199,7 +199,7 @@ class OAuthCBHandler(BaseHTTPRequestHandler):
                     _oauth_result = {"ok": False, "error": _oauth_error}
                     ok = False; msg = _oauth_error
             # Bilingual (EN + FA) callback page. Built without backslashes inside f-string
-            # expressions (that pattern raises SyntaxError on Python <= 3.11). IRmeow brand.
+            # expressions (that pattern raises SyntaxError on Python <= 3.11). aqakoohyar brand.
             icon = "&#9989;" if ok else "&#10060;"
             if ok:
                 en_status = "Connected"
@@ -506,7 +506,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers(); self.wfile.write(raw)
 
     def unauth(self):
-        # Bilingual (EN + FA), IRmeow brand. Shown if the page is opened without the secure token.
+        # Bilingual (EN + FA), aqakoohyar brand. Shown if the page is opened without the secure token.
         page = (
             '<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1"><title>meow</title>'
